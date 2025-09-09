@@ -14,6 +14,8 @@ An underwater adventure game built with Python
 
 You're a treasure hunter looking for buried coins beneath the ocean waves! Use your diving skills to collect golden treasures while avoiding dangerous lionfish that patrol the waters. Once you've gathered your loot, make your way back to the rescue boat before time runs out!
 
+[Play the Game Here](https://codeinplace.stanford.edu/cip5/share/iP7FP2HXRJ7Na05gZ5Zf)
+
 ### Key Features
 - ⚡ **Real-time Action** - Fast-paced underwater adventure
 - 🐠 **Dynamic Enemies** - Avoid moving lionfish threats
