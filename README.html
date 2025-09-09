@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beneath the Waves: Treasure Hunt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+        }
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .screenshot {
+            text-align: center;
+            margin: 30px 0;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .screenshot img {
+            max-width: 100%;
+            height: auto;
+            border: 3px solid #1976d2;
+            border-radius: 8px;
+        }
+        .content-section {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .content-section h2 {
+            color: #1565c0;
+            border-bottom: 2px solid #e3f2fd;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .controls {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .controls code {
+            background: #1976d2;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .feature {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .installation ol, .installation ul {
+            padding-left: 25px;
+        }
+        .installation li {
+            margin: 8px 0;
+        }
+        pre {
+            background: #263238;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        .badge {
+            display: inline-block;
+            background: #4caf50;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🌊 Beneath the Waves: Treasure Hunt 🏴‍☠️</h1>
+        <p>An underwater adventure game built with Python</p>
+        <div>
+            <span class="badge">Python 3.11+</span>
+            <span class="badge">Tkinter</span>
+            <span class="badge">PIL</span>
+        </div>
+    </div>
+
+    <div class="screenshot">
+        <img src="gameScreenshot.png" alt="Beneath the Waves: Treasure Hunt Game Screenshot" />
+        <p><em>Navigate your diver through dangerous waters to collect treasure and return safely to the boat!</em></p>
+    </div>
+
+    <div class="content-section">
+        <h2>📖 Game Description</h2>
+        <p>You're a treasure hunter looking for buried coins beneath the ocean waves! Use your diving skills to collect golden treasures while avoiding dangerous lionfish that patrol the waters. Once you've gathered your loot, make your way back to the rescue boat before time runs out!</p>
+        
+        <div class="features">
+            <div class="feature">
+                <h4>⚡ Real-time Action</h4>
+                <p>Fast-paced underwater adventure</p>
+            </div>
+            <div class="feature">
+                <h4>🐠 Dynamic Enemies</h4>
+                <p>Avoid moving lionfish threats</p>
+            </div>
+            <div class="feature">
+                <h4>🪙 Treasure Collection</h4>
+                <p>Collect coins to increase your score</p>
+            </div>
+            <div class="feature">
+                <h4>❤️ Lives System</h4>
+                <p>Multiple chances to complete your mission</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2>🎯 How to Play</h2>
+        
+        <div class="controls">
+            <h3>🎮 Controls</h3>
+            <ul>
+                <li><code>↑</code> Move Up</li>
+                <li><code>↓</code> Move Down</li>
+                <li><code>←</code> Move Left</li>
+                <li><code>→</code> Move Right</li>
+            </ul>
+        </div>
+
+        <h3>🏆 Objectives</h3>
+        <ol>
+            <li><strong>Collect Coins:</strong> Navigate through the water to collect golden treasure coins (+10 points each)</li>
+            <li><strong>Avoid Lionfish:</strong> Dangerous lionfish swim through the waters - touching them costs you a life!</li>
+            <li><strong>Manage Your Lives:</strong> You start with 5 lives (hearts). Don't let them all run out!</li>
+            <li><strong>Escape to Safety:</strong> After 15 seconds, a rescue boat appears. Reach it to win the game!</li>
+            <li><strong>Maximize Your Score:</strong> Collect as many coins as possible before escaping</li>
+        </ol>
+
+        <h3>🎲 Game Elements</h3>
+        <ul>
+            <li><strong>🤿 Diver:</strong> Your character - keep them safe!</li>
+            <li><strong>🪙 Gold Coins:</strong> Treasure to collect for points</li>
+            <li><strong>🐠 Lionfish:</strong> Dangerous enemies that cost you lives</li>
+            <li><strong>🚤 Rescue Boat:</strong> Your escape route after 15 seconds</li>
+            <li><strong>🌊 Ocean Environment:</strong> Beautiful underwater setting</li>
+        </ul>
+    </div>
+
+    <div class="content-section installation">
+        <h2>🚀 Installation & Setup</h2>
+        
+        <h3>📋 Requirements</h3>
+        <ul>
+            <li>Python 3.11 or higher</li>
+            <li>PIL (Python Imaging Library)</li>
+            <li>tkinter (usually included with Python)</li>
+        </ul>
+
+        <h3>💻 Installation Steps</h3>
+        <ol>
+            <li><strong>Clone the repository:</strong>
+                <pre>git clone https://github.com/TiffusionLabs/Beneath-the-Waves_-Treasure-Hunt.git
+cd beneath-the-waves-treasure-hunt</pre>
+            </li>
+            
+            <li><strong>Install required dependencies:</strong>
+                <pre>pip install Pillow</pre>
+            </li>
+            
+            <li><strong>Run the game:</strong>
+                <pre>python main.py</pre>
+            </li>
+        </ol>
+
+        <h3>📁 File Structure</h3>
+        <pre>beneath-the-waves-treasure-hunt/
+├── main.py              # Main game file
+├── graphics.py          # Custom graphics library
+├── images/              # Game assets
+│   ├── diver2.png      # Player character
+│   ├── fish.png        # Enemy lionfish
+│   ├── boat.png        # Rescue boat
+│   ├── coin.png        # Treasure coins
+│   ├── waterline.png   # Water effects
+│   └── GameOver.png    # Game over screen
+└── README.md           # This file</pre>
+    </div>
+
+    <div class="content-section">
+        <h2>🏅 Game Features</h2>
+        <ul>
+            <li><strong>Smooth Animation:</strong> Fluid movement and object animations</li>
+            <li><strong>Collision Detection:</strong> Precise collision system for interactions</li>
+            <li><strong>Dynamic Difficulty:</strong> Enemies move at varying speeds</li>
+            <li><strong>Visual Effects:</strong> Flash effects when collecting items or taking damage</li>
+            <li><strong>Score System:</strong> Track your treasure hunting progress</li>
+            <li><strong>Lives Display:</strong> Visual heart-based life counter</li>
+            <li><strong>Time-based Progression:</strong> Rescue boat appears after survival period</li>
+            <li><strong>Responsive Controls:</strong> Smooth keyboard input handling</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2>🎮 Gameplay Tips</h2>
+        <ul>
+            <li><strong>Stay Mobile:</strong> Keep moving to avoid the patrolling lionfish</li>
+            <li><strong>Plan Your Route:</strong> Look ahead to plan safe paths to coins</li>
+            <li><strong>Time Management:</strong> Balance coin collection with survival</li>
+            <li><strong>Use the Boundaries:</strong> The edges of the screen can provide safe zones</li>
+            <li><strong>Watch the Timer:</strong> Remember the boat appears after 15 seconds</li>
+            <li><strong>Risk vs Reward:</strong> Sometimes it's better to escape than risk your last life for more coins</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2>🤝 Contributing</h2>
+        <p>Contributions are welcome! Feel free to:</p>
+        <ul>
+            <li>Report bugs or issues</li>
+            <li>Suggest new features or improvements</li>
+            <li>Submit pull requests</li>
+            <li>Create additional game levels or assets</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2>Created with ❤️ by TiffusionLabs</h2>
+        <p>Feel free to reach out for questions or feedback!</p>
+    </div>
+</body>
+</html>
